@@ -1,0 +1,20 @@
+// =============================================================================
+//
+// Handle section gaps for mobile and desktop
+//
+// =============================================================================
+
+@mixin section-gap {
+  padding: $section-gap;
+}
+
+.section {
+
+  @if $section-gap {
+    padding: $section-gap 0;
+
+    @include change-at('tablet') {
+      padding: $section-gap-desktop 0;
+    }
+  }
+}

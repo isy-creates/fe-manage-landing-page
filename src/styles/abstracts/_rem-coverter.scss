@@ -1,0 +1,9 @@
+//Function to convert PX to REM 
+
+@function stripUnit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@function rem($size) {
+  @return stripUnit($size) / stripUnit(16px) *1rem;
+}

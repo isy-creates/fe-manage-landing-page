@@ -1,0 +1,20 @@
+@import 'template-global';
+// =============================================================================
+//
+// Handle Template with one column
+//
+// =============================================================================
+
+//Generate Template
+// =============================================================================
+@mixin template-with-one-column {
+  @extend %grid;
+  grid-template-rows: [nav] auto [main] auto [footer] auto;
+}
+
+//Helper Classes
+// =============================================================================
+.template-with-one-column{
+  @include grid-gap();
+  @include template-with-one-column();
+}

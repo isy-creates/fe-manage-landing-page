@@ -1,0 +1,41 @@
+@import 'template-global';
+// =============================================================================
+//
+// Handle Template with right sidebar
+//
+// =============================================================================
+
+
+//Generate Template
+// =============================================================================
+@mixin with-right-sidebar {
+  @extend %grid;
+
+  @include change-at('tablet') {
+    grid-template-columns: [content] auto [right-sidebar] $sidebar-size;
+  }
+}
+
+@mixin is-right-sidebar {
+  grid-column: right-sidebar;
+}
+
+@mixin is-content() {
+  grid-column: content;
+  grid-row: 1;
+}
+
+//Helper Classes
+// =============================================================================
+.with-right-sidebar {
+  @include with-right-sidebar();
+  @include grid-gap();
+}
+
+.is-right-sidebar {
+  @include is-right-sidebar;
+}
+
+.is-content {
+  @include is-content();
+}

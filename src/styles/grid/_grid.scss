@@ -1,0 +1,21 @@
+// =============================================================================
+//
+// Create & Use Grid
+//
+// =============================================================================
+
+.has-grid {
+  display: grid;
+  gap: $grid-gap;
+  grid-template-columns: repeat(auto-fit, minmax($sidebar-size, 1fr));
+}
+
+@include change-at('tablet') {
+  .is-tall {
+    grid-row: span 2 / auto;
+  }
+  
+  .is-wide {
+    grid-column: span 2 / auto;
+  }
+}

@@ -1,0 +1,54 @@
+@import 'template-global';
+// =============================================================================
+//
+// Handle Template with left Navigation
+//
+// =============================================================================
+
+
+//Generate Template
+// =============================================================================
+
+@mixin template-with-left-navigation {
+
+  @extend %grid;
+  grid-template-columns: [sidebar] $sidebar-size [content] 1fr;
+
+}
+
+//Left-Navigation Template Part
+// =============================================================================
+
+@mixin left-navigation {
+
+  grid-row: sidebar;
+
+  //positioning for mobile and desktop 
+  position: fixed;
+
+  //opening & closing animation
+  transform: translateX(-#{$sidebar-size});
+  transition: all .6s ease-in-out;
+
+  @include change-at('tablet') {
+    transform: translateX(0);
+  }
+
+}
+
+//Helper Classes
+// =============================================================================
+
+.template-with-left-navigation {
+
+  @include template-with-left-navigation();
+
+}
+
+.left-nav {
+
+  @include left-navigation();
+  display: flex;
+  flex-direction: column;
+  
+}

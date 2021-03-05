@@ -1,0 +1,17 @@
+// =============================================================================
+//
+// Cards
+//
+// =============================================================================
+
+.card {
+  background-color: $card-background;
+  @include border-radius();
+  box-shadow: $box-shadow;
+  border: 1px solid $line-color;
+  padding: $size-m;
+
+  &--height {
+    height: rem(658px);
+  }
+}

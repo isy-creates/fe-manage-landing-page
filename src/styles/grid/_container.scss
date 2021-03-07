@@ -12,9 +12,9 @@
 .with-large-container {
   @extend %container;
   max-width: rem($container-is-wide);
-}
+  padding: 0 $size-s;
 
-.with-small-container {
-  @extend %container;
-  max-width: rem($container-is-small);
+  @include change-at('tablet'){
+    padding: 0;
+  }
 }

@@ -1,0 +1,33 @@
+.footer {
+  display: grid;
+
+  
+  @include change-at('tablet') {
+    grid-template-columns: minmax(auto, 165px) minmax(auto, 388px) minmax(auto, 318px);
+
+    &__newsletter {
+      grid-column: 3;
+      grid-row: 1;
+    }
+  
+    &__links {
+      grid-column: 2;
+      grid-row: 1;
+    }
+  
+    &__social {
+      grid-column: 1;
+      grid-row: 2;
+    }
+  
+    &__logo {
+      grid-column: 1;
+      grid-row: 1;
+    }
+  
+    &__copyright {
+      grid-column: 3;
+      grid-row: 2;
+    }
+  }
+}

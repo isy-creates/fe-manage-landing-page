@@ -1,0 +1,9 @@
+.hero {
+  .image {
+    
+    @include change-at('tablet') {
+      grid-column: 2;
+      grid-row: 1;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.header {
+  @include flexbox-centered;
+  margin-top: rem(40px);
+
+  @include change-at('tablet') {
+    margin-top: rem(72px);
+  }
+
+  &__logo{
+    width: 100%;
+    max-width: rem(109);
+
+    @include change-at('tablet') {
+      max-width: rem(146px);
+    }
+  }
+}

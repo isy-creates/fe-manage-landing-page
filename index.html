@@ -4,27 +4,65 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="icon" type="image/png" sizes="32x32" href="src/images/favicon-32x32.png">
+  <link rel="stylesheet" href="dist/css/main.css">
   <title>Frontend Mentor | Manage landing page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
-<body>
+<body class="template-with-one-column">
+  <header class="header with-large-container">
+    <img src="src/images/logo.svg" alt="" class="header__logo">
+    <div class="hamburger-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav class="navigation">
+      <a href="" class="navigation__link">Pricing</a>
+      <a href="" class="navigation__link">Product</a>
+      <a href="" class="navigation__link">About Us</a>
+      <a href="" class="navigation__link">Careers</a>
+      <a href="" class="navigation__link">Community</a>
+    </nav>  
+  </header>
+  <main>
+    <section class="hero section has-grid with-large-container">
+      <img src="#" alt="Bild" class="image">
+      <div>
+        <h1>Bring everyone together to build better products.</h1>
+      </div>
+    </section>
 
-  Pricing
-  Product
-  About Us
-  Careers
-  Community
+    <section class="section has-grid with-large-container">
+      <div>intro textwerwertest</div>
+      <div>three points</div>
+    </section>
+
+    <section class="section">
+      <div>what they've said</div>
+      <div>divdivdiv</div>
+    </section>
+  </main>
+  <footer>
+    <div class="cta-space has-grid with-large-container">
+      <h3>Simplify how your team works today</h3>
+      <button class="cta">get started</button>
+    </div>
+    <div class="footer with-large-container">
+      <div class="footer__newsletter">newsletter</div>
+      <div class="footer__links">links</div>
+      <div class="footer__social">Social Links</div>
+      <div class="footer__logo">logo</div>
+      <div class="footer__copyright">Copyright 2021. All Rights Reserved</div>
+    </div>
+  </footer>
+
+  <script src="/dist/js/main.js"></script>
+
+  <!-- Pricing
 
   Get Started
 
-  Bring everyone together to build better products.
 
   Manage makes it simple for software teams to plan day-to-day 
   tasks while keeping the larger team goals in view.
@@ -96,6 +134,6 @@
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
 </body>
 </html>

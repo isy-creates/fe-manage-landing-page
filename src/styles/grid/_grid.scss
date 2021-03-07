@@ -7,7 +7,11 @@
 .has-grid {
   display: grid;
   gap: $grid-gap;
-  grid-template-columns: repeat(auto-fit, minmax($sidebar-size, 1fr));
+  //grid-template-columns: repeat(auto-fit, minmax($sidebar-size, 1fr));
+  
+  @include change-at('tablet') {
+    grid-template-columns: minmax(auto, 436px) minmax(auto, 540px);
+  }
 }
 
 @include change-at('tablet') {

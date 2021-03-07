@@ -6,36 +6,33 @@
   "author": "Isy",
   "license": "MIT",
   "scripts": {
-    "start": "cross-env NODE_ENV=development webpack serve --config config/webpack.dev.js",
-    "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js"
+    "dev": "gulp --development",
+    "build": "gulp build --production"
   },
   "keywords": [
     "scss"
   ],
   "devDependencies": {
-    "@babel/core": "^7.12.16",
-    "@babel/plugin-proposal-class-properties": "^7.12.13",
-    "@babel/preset-env": "^7.12.16",
-    "babel-loader": "^8.2.2",
-    "clean-webpack-plugin": "^3.0.0",
-    "copy-webpack-plugin": "^6.4.1",
-    "cross-env": "^7.0.3",
-    "css-loader": "^5.0.2",
-    "css-minimizer-webpack-plugin": "^1.2.0",
-    "html-webpack-plugin": "^5.1.0",
-    "mini-css-extract-plugin": "^1.3.6",
-    "node-sass": "^4.14.1",
-    "postcss-loader": "^4.2.0",
-    "postcss-preset-env": "^6.7.0",
-    "sass-loader": "^10.1.1",
-    "style-loader": "^2.0.0",
-    "webpack": "^5.21.2",
-    "webpack-cli": "^4.5.0",
-    "webpack-dev-server": "^3.11.2",
-    "webpack-merge": "^5.7.3"
+    "@babel/core": "^7.13.8",
+    "@babel/preset-env": "^7.13.9",
+    "browser-sync": "^2.26.14",
+    "del": "^6.0.0",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-csso": "^4.0.1",
+    "gulp-dart-sass": "^1.0.2",
+    "gulp-mode": "^1.0.2",
+    "gulp-rename": "^2.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-terser": "^2.0.1",
+    "webpack-stream": "^6.1.2"
   },
   "repository": {
     "type": "git",
     "url": "git@github.com:isy-creates/fe-manage-landing-page.git"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "gulp": "^4.0.2"
   }
 }

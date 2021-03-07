@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;500;700&display=swap');
 // =============================================================================
 // 8p System
 // =============================================================================
@@ -10,50 +11,57 @@ $size-xxs:                              rem(4px);
 $size-xs:                               rem(8px);
 $size-s:                                rem(24px);
 $size-m:                                rem(32px);
-$size-l:                                rem(48px);
-$size-xl:                               rem(56px);
-$size-xxl:                              rem(96px);
+$size-l:                                rem(40px);
+$size-xl:                               rem(48px);
+$size-xxl:                              rem(56px);
 
 // =============================================================================
 // Typography
 // =============================================================================
 
 //Font-Sizes
-$font-size-h1:                                 $size-xxl;
-$font-size-h2:                                 $size-l;
+$font-size-h1:                                 clamp(#{$size-l}, #{"2.0117rem + 2.0888vw"}, #{$size-xxl});
+$font-size-h2:                                 clamp(#{size-m}, #{"5.7324rem + -3.1332vw"}, #{size-l});
 $font-size-h3:                                 rem(42px);
 $font-size-h4:                                 rem(42px);
 $font-size-h5:                                 rem(42px);
 $font-size-h6:                                 rem(42px);
-$font-size-h7:                                 rem(42px);
+
+//inbetween values calculated from https://codesandbox.io/s/clamp-linear-intepolation-based-on-viewport-width-builder-xgkft?from-embed
 
 $body-copy:                              $size-base;
 
-$body-copy-font-family:                 'Nunito';
-$headline-font-family:                  'Nunito';
+$body-copy-font-family:                 'Be Vietnam', sans-serif;
+$headline-font-family:                  $body-copy-font-family;
 
 // =============================================================================
 // Layout
 // =============================================================================
 
-$grid-gap:                          $size-m; //Set 0 if none is needed
+$grid-gap:                          rem(117px); //Set 0 if none is needed
 
-$sidebar-size:                      rem(240px);
+$sidebar-size:                      rem(540px);
 
 
-$section-gap:                       $size-l; //Set 0 if none is needed
-$section-gap-desktop:               $size-xl; //Set 0 if none is needed
+$section-gap:                       rem(48px); //Set 0 if none is needed
+$section-gap-desktop:               rem(66px); //Set 0 if none is needed
 
 //container sizes
-$container-is-wide:                 1600px;
-$container-is-small:                1200px;
+$container-is-wide:                 1111px;
 
 // =============================================================================
 // Colors
 // =============================================================================
 
-$text-color:                      #000000;
-$background-color:                #f1f1f1;
+$primary-color:                   hsl(12, 88%, 59%);
+$secondary-color:                 hsl(228, 39%, 23%);
+
+$text-color:                      hsl(227, 12%, 61%);
+$headline-color:                  $secondary-color;
+
+$navigation-link-color:           hsl(233, 12%, 13%); 
+
+$background-color:                #ffffff;
 
 // =============================================================================
 // UI

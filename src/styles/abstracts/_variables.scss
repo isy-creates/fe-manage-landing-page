@@ -20,8 +20,8 @@ $size-xxl:                              rem(56px);
 // =============================================================================
 
 //Font-Sizes
-$font-size-h1:                                 clamp(#{$size-l}, #{"2.0117rem + 2.0888vw"}, #{$size-xxl});
-$font-size-h2:                                 clamp(#{size-m}, #{"5.7324rem + -3.1332vw"}, #{size-l});
+$font-size-h1:                                 clamp(#{rem(40px)}, #{"1.8906rem + 2.7083vw"}, #{rem(53px)});
+$font-size-h2:                                 clamp(#{rem(29px)}, #{"1.3906rem + 1.8750vw"}, #{rem(38px)});
 $font-size-h3:                                 rem(42px);
 $font-size-h4:                                 rem(42px);
 $font-size-h5:                                 rem(42px);
@@ -43,18 +43,21 @@ $grid-gap:                          rem(117px); //Set 0 if none is needed
 $sidebar-size:                      rem(540px);
 
 
-$section-gap:                       rem(48px); //Set 0 if none is needed
-$section-gap-desktop:               rem(66px); //Set 0 if none is needed
+$section-gap:                       rem(19px); //Set 0 if none is needed
+$section-gap-desktop:               rem(91px); //Set 0 if none is needed
 
 //container sizes
-$container-is-wide:                 1111px;
+$container-is-wide:                 1111px; //Max container size on Desktop
+$container-is-small:                 437px; // Max container size von Tablet
 
 // =============================================================================
 // Colors
 // =============================================================================
 
 $primary-color:                   hsl(12, 88%, 59%);
+$primary-light-color:             hsl(13, 100%, 96%);
 $secondary-color:                 hsl(228, 39%, 23%);
+$secondary-light-color:           hsl(0, 0%, 98%);
 
 $text-color:                      hsl(227, 12%, 61%);
 $headline-color:                  $secondary-color;
@@ -67,7 +70,7 @@ $background-color:                #ffffff;
 // UI
 // =============================================================================
 
-$border-radius:                      5px;
+$border-radius:                     rem(44px);
 $line-color:                        $background-color;
 $box-shadow:                        0 1px 3px 0 rgba(0, 0, 0, .1);
 

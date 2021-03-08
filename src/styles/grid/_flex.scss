@@ -6,7 +6,13 @@
   display: flex;
 }
 
-@mixin flexbox-centered {
+@mixin flexbox-space-between-center {
+  @extend %display-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flexbox-space-between-baseline {
   @extend %display-flex;
   justify-content: space-between;
   align-items: center;

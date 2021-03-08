@@ -1,0 +1,33 @@
+.button {
+  background-image: none;
+  border-radius: $border-radius;
+  border:none;
+  font: 400 rem(13) $body-copy-font-family;
+  line-height: 1.2;
+  width: rem(136);
+  height: rem(44px);
+  transition: all .3s ease-in-out;
+
+  &--primary {
+    background-color: $primary-color;
+    color: $primary-light-color;
+    border: 1px solid #D96A4E;
+    box-shadow: 0 8px 15px 0 rgba($primary-color, .2);
+
+    &:hover {
+      background-color: #FC8E77;
+      transition: all .3s ease-in-out;
+      box-shadow: 0 8px 15px 0 rgba($primary-light-color, .2);
+    }
+  }
+
+  &--secondary {
+    background-color: #fff;
+    color: $primary-color;
+
+    &:hover {
+      color: $primary-light-color;
+      transition: all .3s ease-in-out;
+    }
+  }
+}

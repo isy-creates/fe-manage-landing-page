@@ -3,6 +3,7 @@
 @import 'abstracts/rem-coverter';
 @import 'abstracts/variables';
 @import 'abstracts/border-radius';
+@import 'grid/breakpoints';
 
 //Globals
 // =============================================================================
@@ -12,7 +13,6 @@
 
 //Grid & Layout related
 // =============================================================================
-@import 'grid/breakpoints';
 @import 'grid/grid';
 @import 'grid/section';
 @import 'grid/container';
@@ -31,6 +31,7 @@
 // =============================================================================
 @import 'components/hamburger-menu';
 @import 'components/navigation';
+@import 'components/button';
 @import 'components/card';
 @import 'components/hero';
 

@@ -1,9 +1,32 @@
 .hero {
-  .image {
+  position: relative;
+  &__illustration {
+
+    width: 100%;
+    //max-height: rem(285px);
+    margin: 0 auto;
     
     @include change-at('tablet') {
+      max-height: rem(500);
       grid-column: 2;
       grid-row: 1;
     }
+  }
+
+  &__text {
+    align-self: center;
+  }
+
+  &__button {
+    display: block;
+    margin: 0 auto;
+
+    @include change-at('tablet') {
+      margin-left: 0;
+    }
+  }
+
+  &.section {
+    padding-top: 0;
   }
 }

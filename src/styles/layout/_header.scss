@@ -1,9 +1,11 @@
 .header {
-  @include flexbox-centered;
+  @include flexbox-space-between-baseline;
   margin-top: rem(40px);
+  padding: 0 rem(24);
 
   @include change-at('tablet') {
     margin-top: rem(72px);
+    padding: 0 rem(24) 0 0;
   }
 
   &__logo{
@@ -12,6 +14,7 @@
 
     @include change-at('tablet') {
       max-width: rem(146px);
+      align-self: flex-end;
     }
   }
 }

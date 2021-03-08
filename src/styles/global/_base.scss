@@ -1,3 +1,16 @@
 body {
-  
+  background-image: url('../images/bg-tablet-pattern.svg');
+  background-repeat: no-repeat;
+  background-position: right -30vw top -10vw;
+  background-size: 120%;
+
+  @include change-at('mobile') {
+    background-size: 93%;
+    background-position: right -18vw top -31vw;
+  }
+
+  @include change-at('desktop') {
+    background-position: 156% -15%;
+    background-size: auto;
+  }
 }

@@ -4,8 +4,21 @@
 
 body {
   font-family: $body-copy-font-family;
-  font-size: $body-copy;
-  line-height: 1.5;
+  font-size: rem(14px);
+  line-height: 2;
+
+  @include change-at('tablet') {
+    font-size: $body-copy;
+    line-height: 1.6;
+  }
+}
+
+h1, h2, h3, h4, h5, h5, p {
+  text-align: center;
+
+  @include change-at('tablet') {
+    text-align: left;
+  }
 }
 
 h1, h2, h3, h4, h5, h5 {
@@ -15,24 +28,48 @@ h1, h2, h3, h4, h5, h5 {
 
 h1 {
   font-size: $font-size-h1;
+  letter-spacing: -1px;
+  line-height: 1.2;
+  margin-bottom: rem(8);
+
+  @include change-at('tablet') {
+    letter-spacing: 0;
+    margin-bottom: rem(32);
+  }
 }
 
 h2 {
   font-size: $font-size-h2;
+  line-height: 1.55;
+  margin-bottom: rem(12px);
+
+  @include change-at('tablet'){
+    line-height: 1.15;
+    letter-spacing: .3px;
+    margin-bottom: rem(31px);
+  }
 }
 
 h3 {
   font-size: $font-size-h3;
 }
 
-h4 {
-  font-size: $font-size-h4;
+p {
+  max-width: rem(333);
+  margin: 0 auto;
+
+  @include change-at('desktop') {
+    margin-left: 0;
+  }
 }
 
-h5 {
-  font-size: $font-size-h5;
-}
+.intro {
+  font-size: $body-copy;
+  line-height: 1.75;
+  margin-bottom: rem(29);
 
-h6 {
-  font-size: $font-size-h6;
+  @include change-at('tablet'){
+    line-height: 1.65;
+    margin-bottom: rem(40);
+  }
 }

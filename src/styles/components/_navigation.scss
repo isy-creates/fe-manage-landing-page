@@ -17,4 +17,12 @@
       color: $text-color;
     }
   }
+
+  &__button {
+    display: none;
+
+    @include change-at('tablet') {
+      display: block;
+    }
+  }
 }

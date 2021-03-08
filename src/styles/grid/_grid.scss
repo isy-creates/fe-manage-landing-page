@@ -6,20 +6,11 @@
 
 .has-grid {
   display: grid;
-  gap: $grid-gap;
+  gap: 19px;
   //grid-template-columns: repeat(auto-fit, minmax($sidebar-size, 1fr));
   
   @include change-at('tablet') {
     grid-template-columns: minmax(auto, 436px) minmax(auto, 540px);
-  }
-}
-
-@include change-at('tablet') {
-  .is-tall {
-    grid-row: span 2 / auto;
-  }
-  
-  .is-wide {
-    grid-column: span 2 / auto;
+    gap: $grid-gap;
   }
 }

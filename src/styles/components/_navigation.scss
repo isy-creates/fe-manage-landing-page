@@ -1,7 +1,7 @@
 .navigation {
   display: none;
 
-  @include change-at('tablet') {
+  @include change-at('desktop') {
     display: flex;
   }
 
@@ -21,7 +21,7 @@
   &__button {
     display: none;
 
-    @include change-at('tablet') {
+    @include change-at('desktop') {
       display: block;
     }
   }

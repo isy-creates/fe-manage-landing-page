@@ -38,7 +38,8 @@ $headline-font-family:                  $body-copy-font-family;
 // Layout
 // =============================================================================
 
-$grid-gap:                          rem(117px); //Set 0 if none is needed
+$grid-gap:                          rem(45px);
+$grid-gap-desktop:                  rem(117px); //Set 0 if none is needed
 
 $sidebar-size:                      rem(540px);
 

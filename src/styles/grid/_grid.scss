@@ -11,6 +11,6 @@
   
   @include change-at('tablet') {
     grid-template-columns: minmax(auto, 436px) minmax(auto, 540px);
-    gap: $grid-gap;
+    gap: $grid-gap-desktop;
   }
 }

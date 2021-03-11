@@ -41,7 +41,7 @@
     }
   }
 
-  @include change-at('tablet') {
+  @include change-at('desktop') {
     display: none;
   }
 }

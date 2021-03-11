@@ -11,4 +11,8 @@
 
 @mixin grid-gap {
   grid-gap: $grid-gap;
+
+  @include change-at('desktop') {
+    grid-gap: $grid-gap-desktop;
+  }
 }

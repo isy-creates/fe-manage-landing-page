@@ -54,9 +54,10 @@ h3 {
   font-size: $font-size-h3;
 }
 
-p {
-  max-width: rem(333);
+.text {
+  max-width: rem(335);
   margin: 0 auto;
+  color: $text-color;
 
   @include change-at('desktop') {
     margin-left: 0;

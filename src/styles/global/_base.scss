@@ -2,35 +2,3 @@ body {
   overflow-x: hidden;
 }
 
-.pill {
-
-  position: relative;
-
-  &:after {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    right: 0;
-    background-image: url('../images/bg-tablet-pattern.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 100%;
-    width: 100%;
-    transform: translate(18%, -24%);
-
-    // background-position: right -30vw top -10vw;
-    // background-size: 120%;
-  
-    // @include change-at('mobile') {
-    //   background-size: 93%;
-    //   background-position: right -18vw top -31vw;
-    // }
-  
-    @include change-at('tablet') {
-      height: rem(814px);
-      transform: translate(55%, -50%);
-    }
-  }
-  
-}

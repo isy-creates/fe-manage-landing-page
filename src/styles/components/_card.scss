@@ -12,10 +12,10 @@
   margin-bottom:rem(25);
 
   width: 100%;
-  max-width: 38%;
 
   @include change-at('tablet') {
     margin: 0 0 rem(25);
+    max-width: 38%;
   }
 
   &:not(:last-of-type) {

@@ -102,16 +102,30 @@
     </section>
   </main>
   <footer>
-    <div class="cta-space has-grid with-large-container">
-      <h3>Simplify how your team works today.</h3>
-      <button class="cta-space__button button button--secondary">get started</button>
+    <div class="cta-space">
+      <div class="cta-space__container has-grid with-large-container">
+        <h3 class="cta-space__headline">Simplify how your team works today.</h3>
+        <button class="cta-space__button button button--secondary">get started</button>
+      </div>
     </div>
-    <div class="footer with-large-container">
-      <div class="footer__newsletter">newsletter</div>
-      <div class="footer__links">links</div>
-      <div class="footer__social">Social Links</div>
-      <div class="footer__logo">logo</div>
-      <div class="footer__copyright">Copyright 2021. All Rights Reserved</div>
+    <div class="footer">
+      <div class="footer__container with-large-container">
+        <div class="footer__newsletter">
+          <form action="#" class="newsletter">
+            <fieldset class="newsletter__fieldset" aria-label="Newsletter Registration">
+              <legend class="screen-reader-only">Newsletter registration</legend>
+              <input class="newsletter__input" id="input" type="text" placeholder="Updates in your inbox..." name="email" required autocomplete="off" aria-label="Enter your E-Mail Adress">
+              <div class="newsletter__error-message">Please insert a valid email</div>
+            </fieldset>
+            <input id="submit" type="submit" value="Go" class="newsletter__button button button--secondary">
+          </form>
+
+        </div>
+        <div class="footer__links">links</div>
+        <div class="footer__social">Social Links</div>
+        <div class="footer__logo">logo</div>
+        <div class="footer__copyright">Copyright 2021. All Rights Reserved</div>
+      </div>
     </div>
   </footer>
 

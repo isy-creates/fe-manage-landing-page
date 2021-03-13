@@ -1,0 +1,55 @@
+.newsletter {
+  display: flex;
+  margin-bottom: rem(55);
+
+  @include change-at('tablet') {
+    margin-bottom: rem(43);
+  }
+
+  &__input {
+    height: rem(44);
+    border-radius: $border-radius;
+    width: 100%;
+    padding: 0 rem(16);
+  }
+
+  &__fieldset {
+    flex: 1 0 100%;
+    margin-right: rem(8px);
+  
+    @include change-at('tablet') {
+      max-width: rem(203px);
+    }
+  }
+
+  &__button {
+    width: auto;
+    padding:0 rem(24);
+  }
+
+  &__error-message {
+    display: none;
+    font-size: rem(12);
+    color: #7F3641;
+    padding-left: rem(16);
+  }
+
+  &.error {
+    .newsletter__input {
+      border: 2px solid #7F3641;
+    }
+
+    .newsletter__error-message {
+      display: block;
+    }
+  }
+}
+
+.screen-reader-only {
+  position: absolute;
+  left: -10000px;
+  top:auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

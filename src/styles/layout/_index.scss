@@ -1,7 +1,43 @@
 .difference {
   &__intro {
     margin-bottom: rem(56px);
+  }
+}
 
-    
+.testimonial {
+
+  padding: rem(47) rem(16);
+
+  @include change-at('tablet') {
+    padding-right: 0;
+  }
+
+  h3 {
+    margin-bottom: rem(67);
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    overflow-x: auto;
+    cursor: grab;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    & > * {
+      flex-shrink: 0;
+    }
+  }
+
+  &__button {
+    margin: rem(46) auto 0;
+    display: block;
+
+    @include change-at('tablet') {
+      margin-top: rem(20);
+    }
   }
 }

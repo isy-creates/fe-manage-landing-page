@@ -1,0 +1,25 @@
+.dot-navigation {
+
+  display: flex;
+  justify-content: center;
+
+  @include change-at('tablet') {
+    display: none;
+  }
+
+
+  .dot {
+    height: 9px;
+    width: 9px;
+    border: 2px solid $primary-color;
+    border-radius: 50%;
+
+    &.active {
+      background-color: $primary-color;
+    }
+
+    &:not(:last-of-type) {
+      margin-right: 3px;
+    }
+  }
+}

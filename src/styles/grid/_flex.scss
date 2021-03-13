@@ -15,5 +15,5 @@
 @mixin flexbox-space-between-baseline {
   @extend %display-flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
 }

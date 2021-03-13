@@ -2,3 +2,6 @@ body {
   overflow-x: hidden;
 }
 
+.main-content {
+  min-width: 0; //to prevent grid-blowout 
+}

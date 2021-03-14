@@ -1,7 +1,8 @@
 .cta-space {
-  background: $primary-color url(../images/bg-simplify-section-mobile.svg) no-repeat;
+  background: $primary-color url(../images/bg-simplify-section-mobile.svg)
+    no-repeat;
 
-  @include change-at('tablet') {
+  @include change-at("tablet") {
     background-image: url(../images/bg-simplify-section-desktop.svg);
     background-position: center;
     padding: 0 rem(16);
@@ -21,7 +22,7 @@
     display: block;
     margin: rem(29) auto 0;
 
-    @include change-at('tablet') {
+    @include change-at("tablet") {
       margin-right: 0;
     }
   }
@@ -36,38 +37,116 @@
 
     padding: rem(51) rem(16) rem(25);
 
-    @include change-at('tablet'){
-      padding:rem(57) rem(16);
+    @include change-at("tablet") {
+      padding: rem(57) rem(16);
     }
   }
 
-  
-  @include change-at('tablet') {
-    grid-template-columns: minmax(auto, 165px) minmax(auto, 388px) minmax(auto, 318px);
+  &__links {
+    display: flex;
+    margin-bottom: rem(50);
+
+    & > * {
+      flex: 0 0 50%;
+      list-style-type: none;
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: rem(20);
+    transition: color 0.3s ease-in-out;
+
+    a:hover {
+      color: $primary-color;
+    }
+  }
+
+  @include change-at("tablet") {
+    &__container {
+      grid-template-columns: 1fr 2fr 1fr;
+    }
 
     &__newsletter {
       grid-column: 3;
       grid-row: 1;
     }
-  
+
     &__links {
       grid-column: 2;
       grid-row: 1;
     }
-  
+
     &__social {
       grid-column: 1;
       grid-row: 2;
     }
-  
+
     &__logo {
       grid-column: 1;
       grid-row: 1;
     }
-  
+
     &__copyright {
       grid-column: 3;
-      grid-row: 2;
+      grid-row: 1;
+      align-self: end;
+    }
+  }
+
+  &__social-logo {
+    @include change-at("tablet") {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: rem(50);
+
+    @include change-at("tablet") {
+      justify-content: start;
+      order: 2;
+      margin-bottom: 0;
+    }
+
+    .social-icon {
+      height: rem(21);
+      width: auto;
+
+      &:not(:last-of-type) {
+        margin-right: rem(13);
+      }
+    }
+  }
+
+  &__logo {
+    --svgcolor: #fff;
+    margin: 0 auto rem(51);
+    display: block;
+    width: rem(159);
+
+    @include change-at("tablet") {
+      margin: 0;
+    }
+  }
+
+  &__copyright {
+    font-size: rem(12);
+    color: $text-color;
+    text-align: center;
+
+    @include change-at("tablet") {
+      text-align: right;
     }
   }
 }

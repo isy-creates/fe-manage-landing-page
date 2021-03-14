@@ -1,8 +1,11 @@
 .newsletter {
-  display: flex;
   margin-bottom: rem(55);
 
-  @include change-at('tablet') {
+  @include change-at("mobile") {
+    display: flex;
+  }
+
+  @include change-at("tablet") {
     margin-bottom: rem(43);
   }
 
@@ -11,32 +14,56 @@
     border-radius: $border-radius;
     width: 100%;
     padding: 0 rem(16);
+    margin-bottom: rem(8);
+
+    &::placeholder {
+      font-size: rem(12);
+    }
+
+    @include change-at("mobile") {
+    }
   }
 
   &__fieldset {
-    flex: 1 0 100%;
-    margin-right: rem(8px);
-  
-    @include change-at('tablet') {
+    flex-grow: 1;
+
+    @include change-at("mobile") {
+      margin-right: rem(8px);
+    }
+
+    @include change-at("tablet") {
       max-width: rem(203px);
     }
   }
 
   &__button {
-    width: auto;
-    padding:0 rem(24);
+    display: block;
+    width: 100%;
+    padding: 0 rem(24);
+    box-shadow: none;
+
+    &:hover {
+      box-shadow: none;
+      background-color: #fff;
+      color: $primary-color;
+    }
+
+    @include change-at("mobile") {
+      width: auto;
+      display: inline-block;
+    }
   }
 
   &__error-message {
     display: none;
     font-size: rem(12);
-    color: #7F3641;
+    color: #7f3641;
     padding-left: rem(16);
   }
 
   &.error {
     .newsletter__input {
-      border: 2px solid #7F3641;
+      border: 2px solid #7f3641;
     }
 
     .newsletter__error-message {
@@ -48,7 +75,7 @@
 .screen-reader-only {
   position: absolute;
   left: -10000px;
-  top:auto;
+  top: auto;
   width: 1px;
   height: 1px;
   overflow: hidden;

@@ -1,7 +1,11 @@
+:root {
+  --svgcolor: #{$secondary-color};
+}
+
 body {
   overflow-x: hidden;
 }
 
 .main-content {
-  min-width: 0; //to prevent grid-blowout 
+  min-width: 0; //to prevent grid-blowout
 }

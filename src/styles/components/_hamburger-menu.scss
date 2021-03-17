@@ -3,7 +3,7 @@
 // =============================================================================
 
 .hamburger-menu {
-  width: rem(16);
+  width: 25px;
   z-index: 500;
 
   &:hover {
@@ -15,33 +15,35 @@
     height: 4px;
     background-color: $secondary-color;
     width: 25px;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 
     &:not(:last-of-type) {
       margin-bottom: 3px;
     }
   }
 
-  &.is--open {
+  @include change-at("desktop") {
+    display: none;
+  }
+}
+
+.is-visible {
+  .hamburger-menu {
     span:nth-child(1) {
       transform: rotate(45deg);
-      transform-origin:top left;
-      width: 27px;
+      transform-origin: top left;
+      width: 22px;
     }
-  
+
     span:nth-child(2) {
       opacity: 0;
       width: 0;
     }
-  
+
     span:nth-child(3) {
       transform: rotate(-45deg);
       transform-origin: bottom left;
-      width: 27px;
+      width: 22px;
     }
-  }
-
-  @include change-at('desktop') {
-    display: none;
   }
 }

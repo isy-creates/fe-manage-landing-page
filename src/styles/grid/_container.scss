@@ -12,10 +12,10 @@
 .with-large-container {
   @extend %container;
   max-width: rem($container-is-small);
-  padding-left:rem(16);
-  padding-right:rem(16);
+  padding-left: rem(16);
+  padding-right: rem(16);
 
-  @include change-at('tablet') {
+  @include change-at("tablet") {
     max-width: rem($container-is-wide);
   }
 }

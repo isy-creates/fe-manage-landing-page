@@ -1,17 +1,25 @@
 .navigation {
   display: none;
 
-  @include change-at('desktop') {
+  @include change-at("desktop") {
     display: flex;
   }
 
-  &__link{
-    font-weight: 500;
-    &:not(:last-of-type) {
-      margin-right: $size-m;
+  &__link {
+    font-size: rem(17);
+    letter-spacing: -0.7px;
+    line-height: rem(22);
+    font-weight: 700;
+    color: $headline-color;
+
+    @include change-at("desktop") {
+      font-weight: 500;
+      &:not(:last-of-type) {
+        margin-right: $size-m;
+      }
     }
 
-    transition: color .3s ease-in-out;
+    transition: color 0.3s ease-in-out;
 
     &:hover {
       color: $text-color;
@@ -21,8 +29,30 @@
   &__button {
     display: none;
 
-    @include change-at('desktop') {
+    @include change-at("desktop") {
       display: block;
+    }
+  }
+}
+
+.is-visible {
+  .navigation {
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    margin: 0 rem(24px);
+    z-index: 10;
+    background-color: #fff;
+    left: 0;
+    right: 0;
+    top: 10vw;
+    text-align: center;
+    border-radius: 5px;
+    padding: rem(40) 0 rem(16);
+
+    &__link {
+      margin-bottom: rem(25);
     }
   }
 }

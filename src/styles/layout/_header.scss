@@ -1,18 +1,19 @@
 .header {
+  position: relative;
   @include flexbox-space-between-baseline;
   margin-top: rem(40px);
   padding: 0 rem(24);
 
-  @include change-at('tablet') {
+  @include change-at("tablet") {
     margin-top: rem(72px);
     padding: 0 rem(24) 0 0;
   }
 
-  &__logo{
+  &__logo {
     width: 100%;
     max-width: rem(109);
 
-    @include change-at('tablet') {
+    @include change-at("tablet") {
       max-width: rem(146px);
       align-self: flex-end;
     }
